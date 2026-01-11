@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forgot Password | Task Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #4f46e5, #9333ea);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .forgot-box {
+      background: #fff;
+      width: 100%;
+      max-width: 380px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .forgot-box h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .forgot-box p {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    .input-group input:focus {
+      border-color: #6366f1;
+    }
+
+    .reset-btn {
+      width: 100%;
+      padding: 12px;
+      background: #6366f1;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .reset-btn:hover {
+      background: #4f46e5;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: #6366f1;
+      margin: 0 5px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="forgot-box">
+    <h2>Forgot Password</h2>
+    <p>Enter your email and we’ll send you a reset link</p>
+
+    <form>
+      <div class="input-group">
+        <label>Email</label>
+        <input type="email" placeholder="Enter your registered email" required>
+      </div>
+
+      <button class="reset-btn">Send Reset Link</button>
+
+      <div class="links">
+        <a href="#">Back to Login</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
