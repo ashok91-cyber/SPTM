@@ -19,28 +19,61 @@
     }
 
     /* Header */
-    .header {
-      background: linear-gradient(135deg, #4f46e5, #9333ea);
-      padding: 15px 25px;
-      color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+   .header {
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  padding: 15px 25px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .header h2 {
-      font-size: 20px;
-    }
+  /* Menu toggle */
+  #menu-toggle {
+    display: none;
+  }
 
-    .logout-btn {
-      background: #fff;
-      color: #4f46e5;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+  .menu-container {
+  position: relative;
+}
+
+  .menu-btn {
+    font-size: 26px;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .menu {
+    position: absolute ;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 160px;
+    overflow: hidden;
+    display: none;
+    z-index: 10;
+  }
+
+  .menu a {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+
+  .menu a:hover {
+    background: #f1f3ff;
+  }
+
+  /* Toggle logic */
+  #menu-toggle:checked + label + .menu {
+    display: block;
+  }
+
+
 
     /* Layout */
     .container {
@@ -101,10 +134,6 @@
       border-bottom: none;
     }
 
-    .task span {
-      color: #444;
-    }
-
     .task-status {
       font-size: 13px;
       padding: 4px 10px;
@@ -113,7 +142,6 @@
       color: #4f46e5;
     }
 
-    /* Add Task Button */
     .add-task {
       margin-top: 20px;
       text-align: right;
@@ -126,24 +154,29 @@
       padding: 10px 18px;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 14px;
-    }
-
-    .add-task button:hover {
-      background: #4f46e5;
     }
   </style>
 </head>
 <body>
 
   <div class="header">
-    <h2>Welcome, User 👋</h2>
-    <button class="logout-btn">Logout</button>
+  <h2>Welcome, User 👋</h2>
+
+  <div class="menu-container">
+    <input type="checkbox" id="menu-toggle">
+
+    <label for="menu-toggle" class="menu-btn">☰</label>
+
+    <div class="menu">
+      <a href="#">Profile</a>
+      <a href="#">Settings</a>
+      <a href="#">Logout</a>
+    </div>
   </div>
+</div>
 
   <div class="container">
 
-    <!-- Stats -->
     <div class="stats">
       <div class="card">
         <h3>Total Tasks</h3>
@@ -163,7 +196,6 @@
       </div>
     </div>
 
-    <!-- Task List -->
     <div class="task-section">
       <h3>Today’s Tasks</h3>
 
@@ -175,11 +207,6 @@
       <div class="task">
         <span>Design dashboard UI</span>
         <span class="task-status">Completed</span>
-      </div>
-
-      <div class="task">
-        <span>Push code to GitHub</span>
-        <span class="task-status">Pending</span>
       </div>
 
       <div class="add-task">
