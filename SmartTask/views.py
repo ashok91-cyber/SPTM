@@ -15,3 +15,6 @@ def profile(request):
 
 def forgot(request):
     return render(request,'forgot.html')
+
+def manage_task(request):
+    return render(request,'manage_task.html')
