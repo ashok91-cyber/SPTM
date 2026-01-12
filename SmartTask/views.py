@@ -10,8 +10,8 @@ def login(request):
 def register(request):
     return render(request,'register.html')
 
-def logout(request):
-    return render(request,'logout.html')
+def profile(request):
+    return render(request,'profile.html')
 
 def forgot(request):
     return render(request,'forgot.html')

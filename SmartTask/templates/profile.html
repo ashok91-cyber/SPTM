@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile | Task Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #f4f6fb;
+    }
+
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, #4f46e5, #9333ea);
+      padding: 15px 25px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header h2 {
+      font-size: 20px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* Profile Card */
+    .profile-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      padding: 30px;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #e0e7ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: #4f46e5;
+      font-weight: bold;
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .profile-info h3 {
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .profile-info p {
+      color: #666;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    /* Sections */
+    .section {
+      margin-top: 30px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .section h3 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    .info-box label {
+      font-size: 13px;
+      color: #777;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .info-box input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    .info-box input:focus {
+      border-color: #6366f1;
+    }
+
+    /* Button */
+    .save-btn {
+      margin-top: 20px;
+      background: #6366f1;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .save-btn:hover {
+      background: #4f46e5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h2>My Profile</h2>
+  </div>
+
+  <div class="container">
+
+    <div class="profile-card">
+      <div class="avatar">U</div>
+
+      <div class="profile-info">
+        <h3>User Name</h3>
+        <p>Email: user@email.com</p>
+        <p>Phone: +91 98765 43210</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Personal Information</h3>
+
+      <div class="info-grid">
+        <div class="info-box">
+          <label>Name</label>
+          <input type="text" value="User Name">
+        </div>
+
+        <div class="info-box">
+          <label>Email</label>
+          <input type="email" value="user@email.com">
+        </div>
+
+        <div class="info-box">
+          <label>Phone</label>
+          <input type="tel" value="+91 98765 43210">
+        </div>
+      </div>
+
+      <button class="save-btn">Save Changes</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
